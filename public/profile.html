@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="home.css">
+        <script src="socket.io.js"></script>
+    <title>Document</title>
+
+</head>
+
+<body onload="getProfile(); getMyTweets()">
+    <div class="profileside">
+
+
+        <div>
+
+            <form action="#" class="form">
+                <label class="filebutton">
+                    <div class="imageUpdate">
+                        <img class="img " id="img"
+                            src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.kindpng.com%2Fpicc%2Fm%2F363-3636037_man-judge-light-skin-tone-icon-emoji-man.png&imgrefurl=https%3A%2F%2Fwww.kindpng.com%2Fimgv%2Fhixwhmh_man-judge-light-skin-tone-icon-emoji-man%2F&tbnid=lCLzI9E7Z67QlM&vet=12ahUKEwjWjM2ThbzuAhVD8IUKHQLvD9gQMygQegUIARDXAQ..i&docid=ymMC9Dmhv49PuM&w=860&h=960&q=men%20emoji&ved=2ahUKEwjWjM2ThbzuAhVD8IUKHQLvD9gQMygQegUIARDXAQ"
+                            >
+                        <div class="middle">
+                            <div class="text"></div>
+                        </div>
+                    </div>
+                    <span><input class="opacityFile" type="file" id="fileInput" name="myfile"
+                            onchange="upload(); previewFile()">
+                    </span>
+                </label>
+            </form>
+
+            <div class="profile">
+                <div class="info">
+                    <h1>Home</h1>
+                    <div>UserName : <span id="userName"></span></div>
+                    <div>Email : <span id="userEmail"></span></div>
+                    <div>Phone : <span id="userPhone"></span></div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="button-area">
+            <div class="button">
+                <button class="logout"><a href="profile.html">My Tweet</a> </button>
+                <button class="logout"><a href="home.html">All Tweet</a> </button>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="tweet-area">
+        <div class="button-area">
+            <div class="button">
+                <button class="logout" onclick="return logout()">Log out</button>
+            </div>
+        </div>
+
+        <div class="chatpp">
+
+            <div>
+                <form action="#">
+                    <input type="text" name="" id="message" style="margin:5px ;" placeholder="Type your message....">
+                    <button class="post" onclick=" return tweet()">Post</button>
+                </form>
+            </div>
+            <div id="usertext-area">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
